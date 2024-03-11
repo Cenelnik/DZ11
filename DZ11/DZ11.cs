@@ -6,12 +6,23 @@
     class DZ11
     {
         /// <summary>
-        /// Тут есть опиисание метода по словаря
+        /// Тестирование словаря.
         /// </summary>
         /// <param name="args"></param>
-        public static async Task Main(string[] args)
+        public static void  Main(string[] args)
         {
+           
+            OtusDictionary dictionary = new OtusDictionary(true, (string s) => Console.WriteLine(s));
+            dictionary.Add(18, "lwejhvbwherjvf");
+            Console.ReadKey();
+            dictionary.Add(10, "lwejhvbwherjvf");
+            Console.ReadKey();
+            dictionary.Add(50, "qwdfqweqewf");
+
+            Console.WriteLine("\n\n * * * CHECK RESULTS * * * \n\n");
+            Console.WriteLine($" key = 18 => {dictionary.Get(18)} \n key = 10 => {dictionary.Get(10)} \n key = 50 => {dictionary.Get(50)}");
 
         }
+
     }
 }
